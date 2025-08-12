@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="devcode.jfif">
+    <title>Authentification</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome pour les icônes -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="form-card">
+      <!-- Onglets -->
+      <div class="tabs">
+        <button id="tab-login" class="active">Connexion</button>
+        <button id="tab-register">Inscription</button>
+      </div>
+
+      <!-- Formulaire Connexion -->
+      <form id="login-form" class="form active">
+        <div class="input-group">
+          <i class="fas fa-envelope"></i>
+          <input type="email" placeholder="Email" required />
+        </div>
+        <div class="input-group">
+          <i class="fas fa-lock"></i>
+          <input type="password" placeholder="Mot de passe" required />
+        </div>
+        <a href="#" class="forgot">Mot de passe oublié ?</a>
+        <button type="submit" class="btn">Connexion</button>
+        <p class="switch-text">
+          Pas de compte ? <span id="switch-to-register">Créer un compte</span>
+        </p>
+      </form>
+
+      <!-- Formulaire Inscription -->
+      <form id="register-form" class="form">
+        <div class="two-columns">
+          <div class="input-group">
+            <i class="fas fa-user"></i>
+            <input class="nom" type="text" placeholder="Nom complet" required />
+          </div>
+          <div class="input-group">
+            <i class="fas fa-phone"></i>
+            <input class="num" type="text" placeholder="Numéro" required />
+          </div>
+        </div>
+        <div class="input-group">
+          <i class="fas fa-envelope"></i>
+          <input type="email" placeholder="Email" required />
+        </div>
+        <div class="input-group">
+          <i class="fas fa-map-marker-alt"></i>
+          <input type="text" placeholder="Adresse" required />
+        </div>
+        <div class="input-group">
+          <i class="fas fa-lock"></i>
+          <input type="password" id="pwd" placeholder="Mot de passe" required />
+        </div>
+        <div class="input-group">
+          <i class="fas fa-lock"></i>
+          <input
+            type="password"
+            id="confirm-password"
+            placeholder="Confirmer mot de passe"
+            required
+          />
+        </div>
+        <small id="password-error" class="error-message"></small>
+        <button type="submit" class="btn">S'inscrire</button>
+        <p class="switch-text">
+          Déjà un compte ? <span id="switch-to-login">Se connecter</span>
+        </p>
+      </form>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
